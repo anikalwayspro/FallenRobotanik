@@ -108,7 +108,7 @@ def fallen_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
     if message.text.lower() == "fallen":
         return True
-    elif BOT_USERNAME in message.text:
+    elif BOT_USERNAME in message.text.upper():
         return True
     elif reply_message:
         if reply_message.from_user.id == BOT_ID:
@@ -130,17 +130,17 @@ def chatbot(update: Update, context: CallbackContext):
             return
         bot.send_chat_action(chat_id, action="typing")
         request = requests.get(
-            f"https://kora-api.vercel.app/chatbot/2d94e37d-937f-4d28-9196-bd5552cac68b/{BOT_NAME}/Anonymous/message={message.text}"
+            f"https://api.safone.me/chatbot?query={message.text}&user_id={chat_id}&bot_name=Group_Controller&bot_master=Mukesh"
         )
         results = json.loads(request.text)
         sleep(0.5)
-        message.reply_text(results["reply"])
+        message.reply_text(results["response"])
 
 
 __help__ = f"""
-*{BOT_NAME} has an chatbot which provides you a seemingless chatting experience :*
+*{BOT_NAME} ʜᴀs ᴀɴ ᴄʜᴀᴛʙᴏᴛ ᴡʜɪᴄʜ ᴘʀᴏᴠɪᴅᴇs ʏᴏᴜ ᴀ sᴇᴇᴍɪɴɢʟᴇss ᴄʜᴀᴛᴛɪɴɢ ᴇxᴘᴇʀɪᴇɴᴄᴇ :**
 
- »  /chatbot *:* Shows chatbot control panel
+ »  /ᴄʜᴀᴛʙᴏᴛ *:* sʜᴏᴡs ᴄʜᴀᴛʙᴏᴛ ᴄᴏɴᴛʀᴏʟ ᴘᴀɴᴇʟ
 """
 
 __mod_name__ = "Cʜᴀᴛʙᴏᴛ"
@@ -166,4 +166,4 @@ __handlers__ = [
     CHATBOTK_HANDLER,
     RM_CHAT_HANDLER,
     CHATBOT_HANDLER,
-]
+        ]
