@@ -78,7 +78,7 @@ PM_START_TEXT = """
 🍬 ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs 🍭.
 
 ──────────────────
-*🧁 ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
+*🧁 ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs. 🍬🧁*
 """
 
 buttons = [
@@ -89,7 +89,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="💘 ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs 💘", callback_data="help_back"),
+        InlineKeyboardButton(text="🍬 ʜᴇʟᴩ & ᴄᴏᴍᴍᴀɴᴅs 🍬", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(text=" 🍂 ᴀʙᴏᴜᴛ 🍂", callback_data="fallen_"),
@@ -347,7 +347,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
     if query.data == "fallen_":
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
-            text=f"*ʜᴇʏ,*🥀\n  *ᴛʜɪs ɪs {BOT_NAME}*"
+            text=f"*ʜᴇʏ,*🧁🍬\n  *ᴛʜɪs ɪs {BOT_NAME}*"
             "\n*ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀꜱɪʟʏ ᴀɴᴅ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴄᴀᴍᴍᴇʀꜱ ᴀɴᴅ ꜱᴘᴀᴍᴍᴇʀꜱ.*"
             "\n*ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ.*"
             "\n\n────────────────────"
@@ -397,18 +397,18 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="🍬 sᴜᴩᴩᴏʀᴛ 🍬", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴩᴅᴀᴛᴇs", url=f"https://t.me/{SUPPORT_CHAT}"
+                            text="🍬 ᴜᴩᴅᴀᴛᴇs 🍬", url=f"https://t.me/{SUPPORT_CHAT}"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"tg://user?id={OWNER_ID}"
+                            text="🍬 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🍬 ", url=f"tg://user?id={OWNER_ID}"
                         ),
                         InlineKeyboardButton(
-                            text="ɢɪᴛʜᴜʙ",
+                            text="🍬 ɢɪᴛʜᴜʙ 🍬",
                             url="https://t.me/Link_Generator_op_bot?start=Z2V0LTI3MDUxOTE0OTU1MjEz",
                         ),
                     ],
@@ -715,14 +715,14 @@ def main():
                 chat_id=f"@{SUPPORT_CHAT}",
                 photo=START_IMG,
                 caption=f"""
-ㅤ😎 {BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ...
+ㅤ🍭🍬 {BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ... 🧁🍭
    
-         ✧❅✦❅
-ㅤ **ᴘʏᴛʜᴏɴ :** `{y()}`
-ㅤ **ʟɪʙʀᴀʀʏ :** `{telever}`
-ㅤ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
-ㅤ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
-         ✧❅✦❅✧""",
+         🍭🍬🧁💛
+ㅤ **ᴘʏᴛʜᴏɴ 🍭 :** `{y()}`
+ㅤ **ʟɪʙʀᴀʀʏ 🍭 :** `{telever}`
+ㅤ **ᴛᴇʟᴇᴛʜᴏɴ 🍭:** `{tlhver}`
+ㅤ **ᴩʏʀᴏɢʀᴀᴍ 🍭 :** `{pyrover}`
+         🧁❅🍬❅🧁""",
                 parse_mode=ParseMode.MARKDOWN,
             )
         except Unauthorized:
