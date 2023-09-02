@@ -77,7 +77,7 @@ async def drawText(image_path, text):
 
     else:
 
-        fnt = "./KaizuryuBot/resources/default.ttf"
+        fnt = "./FallenRobot/resources/default.ttf"
 
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
