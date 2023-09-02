@@ -45,5 +45,5 @@ tgcrypto==1.2.5
 wikipedia==1.4.0
 
 redis
-shortuuid
-whisper_sql
+
+
