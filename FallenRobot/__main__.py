@@ -220,7 +220,7 @@ def start(update: Update, context: CallbackContext):
             time.sleep(0.4)
             lol.delete()
             update.effective_message.reply_text(
-            PM_START_TEXT.format(escape_markdown(first_name, BOT_NAME)),                                                 
+            PM_START_TEXT.format(escape_markdown(first_name),BOT_NAME)),                                                 
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
