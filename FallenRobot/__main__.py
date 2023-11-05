@@ -209,7 +209,7 @@ def start(update: Update, context: CallbackContext):
             
             usr = update.effective_user
             lol = update.effective_message.reply_text(
-                PM_START_TEXT.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
+                PM_START_TEXT.format(usr.first_name ), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.4)
             lol.edit_text("❤")
@@ -220,7 +220,7 @@ def start(update: Update, context: CallbackContext):
             time.sleep(0.4)
             lol.delete()
             update.effective_message.reply_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),                                                 
+            PM_START_TEXT.format(escape_markdown(first_name)),                                                 
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
