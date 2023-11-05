@@ -204,12 +204,12 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             x=update.effective_message.reply_sticker(
-                "CAACAgUAAx0CWrWvDgACDxFlR7ABo8_6xP8gO8MGIHFHcATTigACeggAAmTueVXUdcIbOVH5_jME"
+                "CAACAgUAAx0CWrWvDgACDxFlR7ABo8_6xP8gO8MGIHFHcATTigACeggAAmTueVXUdcIbOVH5_jME")
             x.delete()
-            )
+            
             usr = update.effective_user
             lol = update.effective_message.reply_text(
-                PM_START_TEXT.format(usr.first_name,BOT_NAME ), parse_mode=ParseMode.MARKDOWN
+                PM_START_TEXT.format(usr.first_name, BOT_NAME ), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.2)
             lol.edit_text("🌟")
