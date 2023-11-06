@@ -211,7 +211,7 @@ def start(update: Update, context: CallbackContext):
             
             usr = update.effective_user
             lol = update.effective_message.reply_text(
-                PM_START_TEXT.format(usr.first_name, BOT_NAME ), parse_mode=ParseMode.MARKDOWN
+                PM_START_TEXT.format(usr.first_name, BOT_NAME,sql.num_users(),sql.num_chats() ), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.2)
             lol.edit_text("🌟")
