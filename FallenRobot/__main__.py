@@ -76,8 +76,8 @@ PM_START_TEXT = """
 
 *๏ ᴛʜɪs ɪs* {} !
 🍬 ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs 🍭.
-        f"\n*➻ ᴜsᴇʀs »* {sql.num_users()}"
-        f"\n*➻ ᴄʜᴀᴛs »* {sql.num_chats()}"
+        *➻ ᴜsᴇʀs »* {}
+        *➻ ᴄʜᴀᴛs »* {}
 
 ──────────────────
 *🧁 ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs. 🍬🧁*
@@ -222,7 +222,7 @@ def start(update: Update, context: CallbackContext):
             time.sleep(0.4)
             lol.delete()
             update.effective_message.reply_text(
-            PM_START_TEXT.format(escape_markdown(first_name),BOT_NAME),                                                 
+            PM_START_TEXT.format(escape_markdown(first_name),BOT_NAME,sql.num_users(),sql.num_chats()),                                                 
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
